@@ -1,0 +1,42 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<externalNode i18n.job.component.parameters="Component Parameters:" i18n.job.properties="Propriedades" i18n.job.values="Values" i18n.mapper.table.for="Mapper table for " i18n.mapper.table.properties="Mapper table Properties" i18n.job.name="Nome" i18n.tmap.matching.mode="Matching-mode" i18n.mapper.table.isminimized="isMinimized" i18n.tmap.isreject="isReject" i18n.tmap.isrejectinnnerjoin="isRejectInnerJoin" i18n.tmap.isinnerjoin="isInnerJoin" i18n.tmap.expressionfilter="expressionFilter" i18n.mapper.table.metadata.entries="Metadata Table Entries" i18n.job.type="Type" i18n.mapper.table.expression="Expressão" i18n.tmap.isnullable="isNullable" i18n.tmap.constraint.entries="Constraint Table Entries" name="tMap_1" preview="pictures/_09hwcHymEeSVhr6zexE6hw-tMap_1-PREVIEW.bmp">
+  <parameters>
+    <column name="tStatCatcher Statistics">false</column>
+    <column name="Permitir execução em paralelo">false</column>
+    <column name="Mapping links display as: ">AUTO</column>
+    <column name="Temp data directory path: "></column>
+    <column name="Max buffer size (nb of rows): ">2000000</column>
+    <column name="Visualizar informações">true</column>
+    <column name="Comentário"><![CDATA[Componente responsável por mapear os arquivos listados pelo componente anterior com o arquivo dicionario e criar como saida os arquivos json para ser utilizado na API CKAN.]]></column>
+    <column name="Use an existing validation rule">false</column>
+  </parameters>
+  <mapperTable type="input">
+    <table name="formato" matching-mode="UNIQUE_MATCH" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false">
+      <metadataTableEntries>
+        <entry name="formato" type="String" expression="" isNullable="true"/>
+        <entry name="nome" type="String" expression="" isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+    <table name="dicionario" matching-mode="UNIQUE_MATCH" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="true" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="true">
+      <metadataTableEntries>
+        <entry name="mimetype" type="String" expression="" isNullable="true"/>
+        <entry name="formato" type="String" expression="formato.formato " isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="output">
+    <table name="saida_resource" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false">
+      <metadataTableEntries>
+        <entry name="json" type="String" expression="&quot;{&quot; + &quot;\&quot;package_id\&quot;&quot; + &quot;:&quot; + &quot;\&quot;&quot; + &quot;obras-do-pac-programa-de-aceleracao-do-crescimento&quot; + &quot;\&quot;&quot; + &quot;,&quot; + &quot;\&quot;format\&quot;&quot; + &quot;:&quot; + &quot;\&quot;&quot; + dicionario.formato.replaceFirst(&quot;.&quot;, &quot;&quot;).toUpperCase() + &quot;\&quot;&quot; + &quot;,&quot; + &quot;\&quot;mimetype\&quot;&quot; + &quot;:&quot; + &quot;\&quot;&quot; + dicionario.mimetype + &quot;\&quot;&quot; + &quot;,&quot; + &quot;\&quot;name\&quot;&quot; + &quot;:&quot; + &quot;\&quot;&quot; + Var.nome + &quot;\&quot;&quot; + &quot;,&quot; + &quot;\&quot;url\&quot;&quot; + &quot;:&quot; + &quot;\&quot;&quot; + &quot;http://repositorio.dados.gov.br/governo-politica/administracao-publica/pac/&quot;+ formato.nome + &quot;\&quot;&quot; + &quot;}&quot;        " isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="var">
+    <table name="Var" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false">
+      <metadataTableEntries>
+        <entry name="nome" type="String" expression="formato.nome.toLowerCase().contains(&quot;reg&quot;) == true ? &quot;Empreendimentos regionais do PAC referentes ao &quot; + String.valueOf(context.balanco) + routines.StringUtil.stringToUnicode(&quot;º balanço - &quot;) + formato.nome.substring(formato.nome.lastIndexOf(&quot;.&quot;)-2,formato.nome.lastIndexOf(&quot;.&quot;)) + &quot;/&quot; + formato.nome.substring(formato.nome.lastIndexOf(&quot;_&quot;)-4,formato.nome.lastIndexOf(&quot;_&quot;)) : &quot;Obras do PAC em &quot; + dicionario.formato.replaceFirst(&quot;.&quot;, &quot;&quot;).toUpperCase() + &quot; referentes ao &quot; + String.valueOf(context.balanco) + routines.StringUtil.stringToUnicode(&quot;º balanço - &quot;) + formato.nome.substring(formato.nome.lastIndexOf(&quot;.&quot;)-2,formato.nome.lastIndexOf(&quot;.&quot;)) + &quot;/&quot; + formato.nome.substring(formato.nome.lastIndexOf(&quot;_&quot;)-4,formato.nome.lastIndexOf(&quot;_&quot;))    " isNullable="false"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+</externalNode>

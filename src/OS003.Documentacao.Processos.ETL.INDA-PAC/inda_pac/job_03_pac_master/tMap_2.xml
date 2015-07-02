@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<externalNode i18n.job.component.parameters="Component Parameters:" i18n.job.properties="Propriedades" i18n.job.values="Values" i18n.mapper.table.for="Mapper table for " i18n.mapper.table.properties="Mapper table Properties" i18n.job.name="Nome" i18n.tmap.matching.mode="Matching-mode" i18n.mapper.table.isminimized="isMinimized" i18n.tmap.isreject="isReject" i18n.tmap.isrejectinnnerjoin="isRejectInnerJoin" i18n.tmap.isinnerjoin="isInnerJoin" i18n.tmap.expressionfilter="expressionFilter" i18n.mapper.table.metadata.entries="Metadata Table Entries" i18n.job.type="Type" i18n.mapper.table.expression="Expressão" i18n.tmap.isnullable="isNullable" i18n.tmap.constraint.entries="Constraint Table Entries" name="tMap_2" preview="pictures/_09hwcHymEeSVhr6zexE6hw-tMap_2-PREVIEW.bmp">
+  <parameters>
+    <column name="tStatCatcher Statistics">false</column>
+    <column name="Permitir execução em paralelo">false</column>
+    <column name="Mapping links display as: ">AUTO</column>
+    <column name="Temp data directory path: "></column>
+    <column name="Max buffer size (nb of rows): ">2000000</column>
+    <column name="Visualizar informações">true</column>
+    <column name="Comentário"><![CDATA[Componente responsável por mapear os arquivos listados pelo componente anterior com o dataset "obras-pac" e criar como saida os arquivos json para ser utilizado na API CKAN.]]></column>
+    <column name="Use an existing validation rule">false</column>
+  </parameters>
+  <mapperTable type="input">
+    <table name="recursos" matching-mode="UNIQUE_MATCH" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false">
+      <metadataTableEntries>
+        <entry name="name" type="String" expression="" isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+    <table name="dataset" matching-mode="UNIQUE_MATCH" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="true" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="true">
+      <metadataTableEntries>
+        <entry name="id" type="String" expression="" isNullable="true"/>
+        <entry name="name" type="String" expression="recursos.name " isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="output">
+    <table name="saida_order_resource" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false">
+      <metadataTableEntries>
+        <entry name="json" type="String" expression="&quot;{&quot; + &quot;\&quot;id\&quot;&quot; + &quot;:&quot; + &quot;\&quot;&quot; + &quot;obras-do-pac-programa-de-aceleracao-do-crescimento&quot; + &quot;\&quot;&quot; + &quot;,&quot; + &quot;\&quot;order\&quot;&quot; + &quot;:[&quot; + &quot;\&quot;&quot; + &quot;e257ba59-171a-4a56-9bfe-2bae38959fdf&quot; + &quot;\&quot;&quot; + &quot;,&quot; + &quot;\&quot;&quot; + dataset.id + &quot;\&quot;&quot; + &quot;]}&quot; " isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="var">
+    <table name="Var" isMinimized="true" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false"/>
+  </mapperTable>
+</externalNode>

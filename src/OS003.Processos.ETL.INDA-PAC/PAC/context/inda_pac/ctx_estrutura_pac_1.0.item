@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_aHMJwKfgEeSdUromTCcjVg" confirmationNeeded="false" name="Desenvolvimento">
+    <contextParameter xmi:id="_aHMJwafgEeSdUromTCcjVg" comment="" name="entrada" prompt="entrada?" promptNeeded="false" type="id_String" value="C:/entrada/pac"/>
+    <contextParameter xmi:id="_aHMJwqfgEeSdUromTCcjVg" comment="" name="saida" prompt="saida?" promptNeeded="false" type="id_String" value="/entrada/pac"/>
+    <contextParameter xmi:id="_aHMJw6fgEeSdUromTCcjVg" comment="" name="anomes" prompt="anomes?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_aHMJxKfgEeSdUromTCcjVg" comment="" name="resource_create" prompt="resource_create?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/resource_create"/>
+    <contextParameter xmi:id="_aHMJxafgEeSdUromTCcjVg" comment="" name="api" prompt="api?" promptNeeded="false" type="id_String" value="chave-api"/>
+    <contextParameter xmi:id="_aHMJxqfgEeSdUromTCcjVg" comment="" name="balanco" prompt="balanco?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_aHMJx6fgEeSdUromTCcjVg" comment="" name="package_show" prompt="package_show?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/package_show?id=obras-do-pac-programa-de-aceleracao-do-crescimento"/>
+    <contextParameter xmi:id="_aHMJyKfgEeSdUromTCcjVg" comment="" name="resource_order" prompt="resource_order?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/package_resource_reorder"/>
+    <contextParameter xmi:id="_aHMJyafgEeSdUromTCcjVg" comment="" name="log" prompt="log?" promptNeeded="false" type="id_String" value="C:/processo_etl/log/pac/"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_aHMJyqfgEeSdUromTCcjVg" confirmationNeeded="false" name="Homologacao">
+    <contextParameter xmi:id="_aHMJy6fgEeSdUromTCcjVg" comment="" name="entrada" prompt="entrada?" promptNeeded="false" type="id_String" value="/entrada/pac"/>
+    <contextParameter xmi:id="_aHMJzKfgEeSdUromTCcjVg" comment="" name="saida" prompt="saida?" promptNeeded="false" type="id_String" value="/entrada/pac"/>
+    <contextParameter xmi:id="_aHMJzafgEeSdUromTCcjVg" comment="" name="anomes" prompt="anomes?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_aHMJzqfgEeSdUromTCcjVg" comment="" name="resource_create" prompt="resource_create?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/resource_create"/>
+    <contextParameter xmi:id="_aHMJz6fgEeSdUromTCcjVg" comment="" name="api" prompt="api?" promptNeeded="false" type="id_String" value="chave-api"/>
+    <contextParameter xmi:id="_aHMJ0KfgEeSdUromTCcjVg" comment="" name="balanco" prompt="balanco?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_aHMJ0afgEeSdUromTCcjVg" comment="" name="package_show" prompt="package_show?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/package_show?id=obras-do-pac-programa-de-aceleracao-do-crescimento"/>
+    <contextParameter xmi:id="_aHMJ0qfgEeSdUromTCcjVg" comment="" name="resource_order" prompt="resource_order?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/package_resource_reorder"/>
+    <contextParameter xmi:id="_aHMJ06fgEeSdUromTCcjVg" comment="" name="log" prompt="log?" promptNeeded="false" type="id_String" value="/log/pac"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_aHMJ1KfgEeSdUromTCcjVg" confirmationNeeded="false" name="Producao">
+    <contextParameter xmi:id="_aHMJ1afgEeSdUromTCcjVg" comment="" name="entrada" prompt="entrada?" promptNeeded="false" type="id_String" value="/entrada/pac"/>
+    <contextParameter xmi:id="_aHMJ1qfgEeSdUromTCcjVg" comment="" name="saida" prompt="saida?" promptNeeded="false" type="id_String" value="/entrada/pac"/>
+    <contextParameter xmi:id="_aHMJ16fgEeSdUromTCcjVg" comment="" name="anomes" prompt="anomes?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_aHMJ2KfgEeSdUromTCcjVg" comment="" name="resource_create" prompt="resource_create?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/resource_create"/>
+    <contextParameter xmi:id="_aHMJ2afgEeSdUromTCcjVg" comment="" name="api" prompt="api?" promptNeeded="false" type="id_String" value="chave-api"/>
+    <contextParameter xmi:id="_aHMJ2qfgEeSdUromTCcjVg" comment="" name="balanco" prompt="balanco?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_aHMJ26fgEeSdUromTCcjVg" comment="" name="package_show" prompt="package_show?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/package_show?id=obras-do-pac-programa-de-aceleracao-do-crescimento"/>
+    <contextParameter xmi:id="_aHMJ3KfgEeSdUromTCcjVg" comment="" name="resource_order" prompt="resource_order?" promptNeeded="false" type="id_String" value="http://ip-servidor/api/3/action/package_resource_reorder"/>
+    <contextParameter xmi:id="_aHMJ3afgEeSdUromTCcjVg" comment="" name="log" prompt="log?" promptNeeded="false" type="id_String" value="/log/pac"/>
+  </talendfile:ContextType>
+</xmi:XMI>
